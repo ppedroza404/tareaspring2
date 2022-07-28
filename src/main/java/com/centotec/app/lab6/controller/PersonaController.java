@@ -38,4 +38,12 @@ public class PersonaController {
         personaService.savePersona(persona);
         return "agregarEntrada";
     }
+
+    @RequestMapping(value = "/modificar", method = RequestMethod.GET)
+    public String navegarPaginaModificar(Model model){
+        Persona persona = new Persona();
+        model.addAttribute("persona",persona);
+        return "modificarPersona";
+    }
+
 }

@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface PersonaService {
     void savePersona(Persona persona);
-
+    void deletePersona(Persona persona);
     List<Persona> getAll();
 }

@@ -16,6 +16,12 @@ public class PersonaServiceImpl implements PersonaService {
     public void savePersona(Persona persona){
         personaRepository.save(persona);
     }
+
+    @Override
+    public void deletePersona(Persona persona) {
+        personaRepository.delete(persona);
+    }
+
     @Override
     public List<Persona> getAll(){
         return personaRepository.findAll();
