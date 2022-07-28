@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Agregar Persona a sistema</title>
+</head>
+<body>
+<h1>Insertar</h1>
+<form action="#" th:action="@{/agregarEntrada}" th:object="${persona}" method="post">
+    <label for="Nombre">Nombre</label>
+    <input type="text" th:field="*{nombre}"  id="Nombre"/>
+
+    <label for="Apellido">Apellido</label>
+    <input type="text" th:field="*{apellido}"  id="Apellido"/>
+
+    <label for="DiaDeNacimiento">Fecha Nacimiento</label>
+    <input type="date" th:field="*{dNacimineto}"  id="DiaDeNacimiento"/>
+
+    <label for="Puesto">Puesto</label>
+    <input type="text" th:field="*{puesto}"  id="Puesto"/>
+
+    <input type="submit" value="add entry">
+</form>
+<a href="/">Volver al principal</a>
+</body>
+</html>
